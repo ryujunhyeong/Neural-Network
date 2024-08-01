@@ -3,19 +3,18 @@
 
 ### RNN
 input: $X_{b}$, Output: $H_{t}$, $A$주변 테두리: network가 이전단계의 정보를 받는것
-![RNN](./figure/rnn.png){: width="50%"}
+<img src="./figure/rnn.png" style="width:50%;" />
 
 RNN은 짧은 기간은 잘 찾을 수 있지만, 길어지면 문제가 됨.
 LSTM은 긴 기간의 의존성을 갖고 있는 문제를 잘 해결할 수 있음.
 
 #### - RNN 예시
-![RNN_Layer](./figure/rnn_layer.png){: width="30%"}
+<img src="./figure/rnn_layer.png" style="width:30%;" />
 
 단순한 A(neural network) 1개 층만 이용함.
 
 #### - LSTM 예시
-![LSTM_Layer](./figure/lstm_layer.png){: width="45%"}
-
+<img src="./figure/lstm_layer.png" style="width:45%;" />
 4개의 상호작용 레이어(3개의 Gate) 사용함.
 
 1. 망각 게이트(Forget Gate) 레이어
@@ -35,7 +34,7 @@ LSTM은 긴 기간의 의존성을 갖고 있는 문제를 잘 해결할 수 있
 3. 이전 셀 상태 $C_{t-1}$는 망각 게이트 $f_{t}$에 의해 잊혀질 부분이 결정되고, 입력 게이트 $i_{t}$에 의해 새로운 정보 $\tilde{C}_{t}$가 반영되어 새로운 셀 상태 $C_{t}$가 됨.
     - $C_{t}$ = $f_{t}$$\cdot$$C_{t-1}$ + $i_{t}$ $\cdot$ $\tilde{C}_{t}$
 4. 출력 게이트 $o_{t}$가 현재 셀 상태 $C_{t}$를 기반으로 최종 hidden state $h_{t}$를 결정함.
-    - $h_{t}$ = $o_{t}$ $\cdot$ $\tanh$($C_{t}$)
+    - $h_{t}$ = $o_{t}\cdot \tanh(C_{t})$
 
 
 ### 종류별 비교
@@ -67,8 +66,8 @@ LSTM은 긴 기간의 의존성을 갖고 있는 문제를 잘 해결할 수 있
 </table>
 
 ### 내용
-![공부자료1](./figure/study1.jpeg){: width="45%"}
-![공부자료2](./figure/study2.jpeg){: width="45%"}
+<img src="./figure/study1.jpeg" style="width:45%;" />
+<img src="./figure/study2.jpeg" style="width:45%;" />
 
 
 ##### 참고 자료
